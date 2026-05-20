@@ -1,4 +1,4 @@
-# PINN for Zimm-Bragg / Ising helix-coil kinetics
+# PINN for Zimm-Bragg / Ising-Like Systems
 
 Code, data-generation pipeline, and paper source for a physics-informed
 neural network that learns the closed-moment Glauber dynamics of an
