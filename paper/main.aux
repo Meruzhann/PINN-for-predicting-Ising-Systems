@@ -1,0 +1,94 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{landau-stat}
+\citation{zimmbragg1959}
+\citation{glauber1963,allahverdyan2009kinetics}
+\citation{raissi2019pinn}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{I}{1}{Introduction}{section.1}{}}
+\citation{landau-stat}
+\citation{zimmbragg1959}
+\citation{stepanyan2024}
+\citation{allahverdyan2009kinetics}
+\citation{glauber1963}
+\citation{allahverdyan2009kinetics}
+\citation{landau-stat,allahverdyan2009kinetics}
+\citation{raissi2019pinn}
+\citation{carleo2017}
+\citation{allahverdyan2009kinetics}
+\citation{allahverdyan2009kinetics}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Literature Review}{2}{section.2}\protected@file@percent }
+\newlabel{sec:litreview}{{II}{2}{Literature Review}{section.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{2}{section.3}\protected@file@percent }
+\newlabel{sec:methodology}{{III}{2}{Methodology}{section.3}{}}
+\newlabel{eq:tanh-decomp}{{1}{2}{Methodology}{equation.3.1}{}}
+\newlabel{eq:m-ode}{{2}{2}{Methodology}{equation.3.2}{}}
+\newlabel{eq:e-ode}{{3}{2}{Methodology}{equation.3.3}{}}
+\newlabel{eq:glauber-fwd}{{4}{2}{Methodology}{equation.3.4}{}}
+\citation{kingma2015adam}
+\citation{liu1989lbfgs}
+\newlabel{eq:m-ode-closed}{{5}{3}{Methodology}{equation.3.5}{}}
+\newlabel{eq:l-data}{{6}{3}{Methodology}{equation.3.6}{}}
+\newlabel{eq:l-phys}{{7}{3}{Methodology}{equation.3.7}{}}
+\newlabel{eq:residual-def}{{8}{3}{Methodology}{equation.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Training dynamics. Top: data and physics losses on a log scale across the Adam$\to $L-BFGS handoff at step $4000$. Bottom: the three trainable scalars $(a_0, a_1, a_2)$ against their analytical Glauber values (dotted).}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:training}{{1}{3}{Training dynamics. Top: data and physics losses on a log scale across the Adam$\to $L-BFGS handoff at step $4000$. Bottom: the three trainable scalars $(a_0, a_1, a_2)$ against their analytical Glauber values (dotted)}{figure.1}{}}
+\newlabel{eq:eps-from-m}{{9}{4}{Methodology}{equation.3.9}{}}
+\newlabel{eq:eps2-inversion}{{10}{4}{Methodology}{equation.3.10}{}}
+\citation{numba}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Single Glauber Monte Carlo realization on a $256$-spin chain. Blue is $+1$, red is $-1$. The chain-averaged helicity $\bar  m(t)$ at time $t$ is the row-mean across this map; the closed-moment ODE describes the dynamics of that row-mean and of its two short-range correlators.}}{5}{figure.2}\protected@file@percent }
+\newlabel{fig:trajectory}{{2}{5}{Single Glauber Monte Carlo realization on a $256$-spin chain. Blue is $+1$, red is $-1$. The chain-averaged helicity $\mbar $ at time $t$ is the row-mean across this map; the closed-moment ODE describes the dynamics of that row-mean and of its two short-range correlators}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{5}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{IV}{5}{Results}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces In-domain fit of the PINN-Analytical pipeline against Monte Carlo truth on a representative condition. Left: the helicity $\hat  m(t)$, which is the only quantity that appears in the loss. Middle: the nearest-neighbor correlator $\hat  \varepsilon (t)$ recovered from the independent-spins approximation \eqref  {eq:eps-from-m}. Right: the next-nearest-neighbor correlator $\hat  \varepsilon _2(t)$ recovered analytically from the m-equation~\eqref  {eq:eps2-inversion}; this is the only post-hoc step in the pipeline that is closure-free, and the residual error is dominated by the precision of $\hat  m(t)$ and the recovered scalars.}}{6}{figure.3}\protected@file@percent }
+\newlabel{fig:in-domain}{{3}{6}{In-domain fit of the PINN-Analytical pipeline against Monte Carlo truth on a representative condition. Left: the helicity $\mhat $, which is the only quantity that appears in the loss. Middle: the nearest-neighbor correlator $\hat \eps (t)$ recovered from the independent-spins approximation \eqref {eq:eps-from-m}. Right: the next-nearest-neighbor correlator $\hat \epstwo (t)$ recovered analytically from the m-equation~\eqref {eq:eps2-inversion}; this is the only post-hoc step in the pipeline that is closure-free, and the residual error is dominated by the precision of $\mhat $ and the recovered scalars}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces PINN-recovered Glauber scalars compared with the analytical forward map. The dominant coefficient $a_1$ is recovered to a few percent. $a_0$ and $a_2$ are recovered in the correct magnitude range; the larger relative error on $a_2$ is consistent with its small contribution to the m-equation residual.}}{6}{figure.4}\protected@file@percent }
+\newlabel{fig:scalar-recovery}{{4}{6}{PINN-recovered Glauber scalars compared with the analytical forward map. The dominant coefficient $a_1$ is recovered to a few percent. $a_0$ and $a_2$ are recovered in the correct magnitude range; the larger relative error on $a_2$ is consistent with its small contribution to the m-equation residual}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces PINN vs.\ standard MLP on a 50\%/50\% train/test split. Both fit the training half tightly; the PINN tracks the Monte Carlo truth on the held-out half while the unconstrained MLP drifts after the training window ends.}}{7}{figure.5}\protected@file@percent }
+\newlabel{fig:extrapolation}{{5}{7}{PINN vs.\ standard MLP on a 50\%/50\% train/test split. Both fit the training half tightly; the PINN tracks the Monte Carlo truth on the held-out half while the unconstrained MLP drifts after the training window ends}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Joint test MSE (sum over $m$, $\varepsilon $, $\varepsilon _2$) on the held-out half of the trajectory. The PINN's joint extrapolation MSE is roughly an order of magnitude below the standard-NN baseline.}}{7}{figure.6}\protected@file@percent }
+\newlabel{fig:extrapolation-mse}{{6}{7}{Joint test MSE (sum over $m$, $\eps $, $\epstwo $) on the held-out half of the trajectory. The PINN's joint extrapolation MSE is roughly an order of magnitude below the standard-NN baseline}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Five PINN variants on the 50\%/50\% extrapolation split. From top to bottom: $m(t)$, $\varepsilon (t)$, $\varepsilon _2(t)$. The PINN-Analytical (chosen) trajectory is the only one that is closure-free in $\varepsilon _2$ and is competitive on the other two observables.}}{8}{figure.7}\protected@file@percent }
+\newlabel{fig:variants-traj}{{7}{8}{Five PINN variants on the 50\%/50\% extrapolation split. From top to bottom: $m(t)$, $\eps (t)$, $\epstwo (t)$. The PINN-Analytical (chosen) trajectory is the only one that is closure-free in $\epstwo $ and is competitive on the other two observables}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Total extrapolation MSE per variant (sum over $m$, $\varepsilon $, $\varepsilon _2$ on the held-out half). The chosen PINN-Analytical pipeline (green) is the lowest.}}{8}{figure.8}\protected@file@percent }
+\newlabel{fig:variants-mse}{{8}{8}{Total extrapolation MSE per variant (sum over $m$, $\eps $, $\epstwo $ on the held-out half). The chosen PINN-Analytical pipeline (green) is the lowest}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Same per-variant comparison as Figure~\ref {fig:variants-mse}, evaluated on a separately generated dataset with more negative coupling and field values ($J, h$).}}{8}{figure.9}\protected@file@percent }
+\newlabel{fig:variants-mse-m}{{9}{8}{Same per-variant comparison as Figure~\ref {fig:variants-mse}, evaluated on a separately generated dataset with more negative coupling and field values ($J, h$)}{figure.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Analysis and Validation}{8}{section.5}\protected@file@percent }
+\newlabel{sec:analysis}{{V}{8}{Analysis and Validation}{section.5}{}}
+\citation{glauber1963}
+\citation{allahverdyan2009kinetics}
+\citation{raissi2019pinn}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion and Conclusion}{9}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{VI}{9}{Discussion and Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Derivation of the closed-moment Glauber ODEs}{9}{section*.1}\protected@file@percent }
+\newlabel{app:moment-ode}{{A}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{section*.1}{}}
+\newlabel{eq:master}{{11}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{equation.Appendix.A.11}{}}
+\newlabel{eq:flip-rate}{{12}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{equation.Appendix.A.12}{}}
+\newlabel{eq:single-spin}{{13}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{equation.Appendix.A.13}{}}
+\newlabel{eq:m-pre-expand}{{14}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{equation.Appendix.A.14}{}}
+\newlabel{eq:tanh-expand}{{15}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the closed-moment Glauber ODEs}{equation.Appendix.A.15}{}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Derivation of the physics loss}{9}{section*.2}\protected@file@percent }
+\newlabel{app:phys-loss}{{B}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the physics loss}{section*.2}{}}
+\newlabel{eq:residual-def-app}{{17}{9}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the physics loss}{equation.Appendix.B.17}{}}
+\bibstyle{IEEEtran}
+\bibdata{references}
+\bibcite{landau-stat}{1}
+\bibcite{zimmbragg1959}{2}
+\bibcite{glauber1963}{3}
+\bibcite{allahverdyan2009kinetics}{4}
+\bibcite{raissi2019pinn}{5}
+\bibcite{stepanyan2024}{6}
+\bibcite{carleo2017}{7}
+\bibcite{kingma2015adam}{8}
+\bibcite{liu1989lbfgs}{9}
+\bibcite{numba}{10}
+\newlabel{eq:total-loss}{{18}{10}{\appendixname \nobreakspace \thesectiondis \\* Derivation of the physics loss}{equation.Appendix.B.18}{}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  C: Recovering $\varepsilon (t)$ and $\varepsilon _2(t)$ from $m(t)$}{10}{section*.3}\protected@file@percent }
+\newlabel{app:eps-recovery}{{C}{10}{\appendixname \nobreakspace \thesectiondis \\* Recovering $\eps (t)$ and $\epstwo (t)$ from $m(t)$}{section*.3}{}}
+\newlabel{eq:eps-indep-spins}{{19}{10}{\appendixname \nobreakspace \thesectiondis \\* Recovering $\eps (t)$ and $\epstwo (t)$ from $m(t)$}{equation.Appendix.C.19}{}}
+\newlabel{eq:eps2-from-m-exact}{{21}{10}{\appendixname \nobreakspace \thesectiondis \\* Recovering $\eps (t)$ and $\epstwo (t)$ from $m(t)$}{equation.Appendix.C.21}{}}
+\@writefile{toc}{\contentsline {section}{References}{10}{section*.4}\protected@file@percent }
+\gdef \@abspage@last{10}
